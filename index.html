@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h2 class="header-text">Welcome to Book Library</h2>
+        <button class="button-30 new-book">New Book</button>
+        <div class="modal">
+          <dialog class="forms-container form-dialog">
+            <form class="forms" method="dialog">
+              <h2 class="modal-header">Adding New Book</h2>
+              <label for="book-title">Title:</label>
+              <input type="text" id="book-title" />
+              <label for="author-name">Author:</label>
+              <input type="text" id="author-name" />
+              <label for="pages">Pages:</label>
+              <input type="number" name="pages" id="pages" />
+              <button class="close-button button-30" type="button">
+                Cancel
+              </button>
+              <button
+                class="submit-button button-30"
+                role="button"
+                type="submit"
+              >
+                Add Book
+              </button>
+            </form>
+          </dialog>
+        </div>
+      </header>
+      <div class="books-container"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    rgb(0, 174, 255),
+    rgb(186, 182, 182)
+  );
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.header {
+  grid-column: 1 / -1;
+  padding: 3rem;
+  gap: 1rem;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+.header-text {
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+}
+.new-book {
+  justify-self: center;
+  align-self: center;
+}
+.forms {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+  padding: 1em;
+}
+.forms > label {
+  grid-column: 1;
+  grid-row: auto;
+  font-size: 1em;
+  color: black;
+  font-weight: bold;
+}
+.forms > input {
+  grid-column: 2;
+  grid-row: auto;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 0.5em;
+}
+.forms > button {
+  grid-column: span 1;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+.books-container {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  box-shadow: 0px 5px 10px #d8d8d8;
+}
+.book-infos ul {
+  display: grid;
+  gap: 1rem;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.book-infos li button {
+  padding: 5px;
+}
+.close-button {
+  grid-column: 1 / 2;
+  background-color: rgb(255, 13, 0);
+  color: white;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(194, 12, 2) 0 -3px 0 inset;
+}
+.close-button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(194, 12, 2) 0 -3px 0 inset;
+}
+.close-button:active {
+  box-shadow: rgb(194, 12, 2) 0 3px 7px inset;
+}
+.form-dialog {
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px;
+}
+.form-dialog::backdrop {
+  background-color: rgb(0, 0, 0);
+
+  opacity: 0.4;
+}
+.modal-header {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-bottom: 1rem;
+}
